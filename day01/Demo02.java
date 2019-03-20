@@ -7,6 +7,5 @@ public class Demo02{
       System.out.println("请在输入一个数");
       int b = scanner.nextInt();
       System.out.println("输入的两个数是否相等：" + (a == b));
-
   }
 }

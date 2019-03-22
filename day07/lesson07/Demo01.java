@@ -13,6 +13,18 @@ public class Demo01 {
     // 属性： 姓名， 年龄， 行不
     // 行为： 学习， 睡觉
     //
+    
+    //使用类
+    //1. 实例化类
+    Student stu1 = new Student();
+    // 2. 给属性赋值
+    stu1.name = "马云";
+    stu1.age = 50;
+    stu1.gender = '男';
+
+    // 3. 指挥对象干事
+    stu1.study();
+    stu1.sleep();
 
 
   }
@@ -35,12 +47,12 @@ class Student{
 
   // 添加方法1
   public void study(){ //这里和之前学的方法有点不同，没有static关键词，具体再后面的章节有说明
-    System.out.println("学习Java..");
+    System.out.println(name + " 学习Java..");
   
   }
   // 添加方法2
   public void sleep(){
-    System.out.println("在桌子趴着睡...");
+    System.out.println(name + " 在桌子趴着睡...");
   }
   
 

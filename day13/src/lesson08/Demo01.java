@@ -3,6 +3,7 @@ package lesson08;
 import com.baidu.model.Student;
 
 
+import com.baidu.model.Teacher;
 
 public class Demo01 {
 
@@ -27,3 +28,9 @@ public class Demo01 {
     stu.say();
   }
 }
+
+class abc{
+  String name;
+
+}
+

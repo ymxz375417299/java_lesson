@@ -22,9 +22,11 @@ public class Demo01 {
     //- public static long currentTimeMillis()
     //- public static void arraycooy(Object src, int srcPos, Object dest, int destPos, int )
     
+    System.out.println("hah ");
   }
 
 }
+
 
 
 // Cigerette 香烟

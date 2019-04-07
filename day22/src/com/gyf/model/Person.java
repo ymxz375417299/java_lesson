@@ -1,6 +1,6 @@
 package com.gyf.model;
 
-public class Person {
+public class Person implements Comparable<Person>{
   private String name;
   private int age;
   
@@ -75,5 +75,17 @@ public class Person {
     return !(age != object.age);
   }
 
+  @Override
+  public int compareTo(Person other){
+    int num = this.age - other.age;
+    System.out.println(this.name + "。。比较。。" + other.name + "比较差。" + (num));
+    //HashSet 去除重复元素写hashCode和equals方法
+    //TreeSet 去除
+    if (num == 0){
+      num = 1;
+    }
+    return this.age - other.age; // 结果会得到数字，如果为正，则正常插入，
+    // 如果为负， 则倒着插叙
+  }
 }
 

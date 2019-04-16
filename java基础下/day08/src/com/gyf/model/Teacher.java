@@ -5,6 +5,7 @@ public class Teacher {
   private String hometown;
   private double height;
   public String color;
+  
 
 
 
@@ -32,15 +33,6 @@ public class Teacher {
     this.height = height;
   }
 
-  @Override
-  public String toString() {
-    return "Teacher{" +
-      "name = " + getName() +
-      ", hometow = " + getHometow() +
-      ", height = " + getHeight() +
-      "}";
-  }
-
   // 无参构造方法
   public Teacher() {
     super();
@@ -65,6 +57,16 @@ public class Teacher {
     this.name = name;
     this.hometown = hometown;
     this.height = height;
+  }
+
+  @Override
+  public String toString() {
+    return "Teacher{" +
+      "name = " + getName() +
+      ", hometown = " + hometown +
+      ", height = " + getHeight() +
+      ", color = " + color +
+      "}";
   }
 
 }

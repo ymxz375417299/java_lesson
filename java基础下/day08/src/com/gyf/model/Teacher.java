@@ -69,5 +69,21 @@ public class Teacher {
       "}";
   }
 
+  public void say1(){
+    System.out.println("我是一只小丑鸭，没有名字，呜呜~~~");
+  }
+
+  public void say2(String name){
+    System.out.println("我是一只小天鹅，名字叫 " + name);
+  }
+
+  public void say3(String name, int age){
+    System.out.println("我是一只" + name + "今年" + age + " 岁");
+  }
+
+  // 私有方法
+  private void say4(String name){
+    System.out.println("私有方法：" + name);
+  }
 }
 

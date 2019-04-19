@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>表格属性</title>
+    <style type="text/css" media="all">
+        /*轮廓属性*/
+        table{
+          border:1px solid red;
+          /* outline: 1px dashed bulue; */
+          /* 等效于下面三行*/
+          outline-color: blue; /*颜色*/
+          outline-style: dashed; /*虚线*/
+          outline-width: 3px; /*宽度*/
+
+          
+        }
+    </style>
+  </head>
+  <body>
+    <table border="1" width=“300px">
+      <caption>中国领导人</caption>
+      <tr>
+        <td>名称</td>
+        <td>产地</td>
+      </tr>
+      <tr>
+        <td>习近平</td>
+        <td>陕西</td>
+      </tr>
+      <tr>
+        <td>李克强</td>
+        <td>安徽</td>
+      </tr>
+    </table>
+  </body>
+</html>

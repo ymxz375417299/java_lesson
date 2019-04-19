@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>元素定位</title>
+    <style type="text/css" media="all">
+      /*绝对定位*/
+      .div1{
+        width:200px;
+        height:200px;
+        border: 1px solid red;
+      }
+      .div2{
+        width:200px;
+        height:200px;
+        border: 1px solid green;
+        /* 定位： absolute定位 */
+        position: absolute; /* 脱离文档流*/
+        left: 208px;/* 在原来的位置从左向右移动200px*/
+        top: 8px; /** 在原来的位置从上向下移动50px*/
+
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+  </body>
+</html>

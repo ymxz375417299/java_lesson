@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Date对象</title>
+    <script charset="utf-8">
+      /* 
+        Date: 日期对象
+          1 创建
+            var date = new Date();
+          2. 方法
+            1. toLocaleString(); 返回当前date对象对应的时间本地(根据不同国家)字符串格式 (类似java的simpleDateFormate)
+            2. getTime(); 获取时间戳
+            */
+      var date = new Date();
+      document.write(date + "<br>");
+
+      document.write(date.toLocaleString() + "<br>");
+
+      document.write(date.getTime() + "<br>")
+
+    </script>
+    
+  </head>
+  <body>
+  </body>
+</html>

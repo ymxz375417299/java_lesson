@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Globald独享</title>
+    <script charset="utf-8">
+
+    /*
+      ### 9. Global
+      1. 特点：全局对象，这个Global中封装的方法不需要对象就可以直接调用。  直接方法名();
+      2. 方法：
+      - encodeURI():url编码
+      - decodeURI():url解码
+
+      - encodeURIComponent():url编码,编码的字符更多
+      - decodeURIComponent():url解码
+
+      - parseInt():将字符串转为数字
+          * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+          - isNaN():判断一个值是否是NaN
+              * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+
+              - eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
+              3. URL编码
+              - 传智播客 =  %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
+      */
+
+      // - encodeURI():url编码
+      // - decodeURI():url解码
+      var str = "http://www.baidu,com?wd=传智博客";
+      var encode = encodeURI(str);
+      document.write(encode + "<br>");
+      var s = decodeURI(encode);
+      document.write(s + "<br>");
+
+
+      // - encodeURIComponent():url编码,编码的字符更多
+      // - decodeURIComponent():url解码
+      var str2 = "http://www.baidu,com?wd=传智博客";
+      var encode2 = encodeURIComponent(str2);
+      document.write(encode2 + "<br>");
+      var s = decodeURIComponent(encode2);
+      document.write(s + "<br>");
+
+      // - parseInt():将字符串转为数字
+      //    * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+      var str = "123abc";
+      var number = parseInt(str)
+      // alert(+str + 1); // 输出NaN 因为+"123abc" 是无法转成数字，NaN， 而NaN和任何数字运算的结果都是NaN
+      // alert(+number + 1); // 说明paeseInt
+      //    * 逐一判断每一个字符是否是数字，直到不是数字为止，将前边数字部分转为number
+
+
+        //  - isNaN():判断一个值是否是NaN
+        //      * NaN六亲不认，连自己都不认。NaN参与的==比较全部问false
+        var a = NaN;
+        document.write((a == NaN) + "<br>"); // 连自己都不能判断是否一样
+        document.write(isNaN(a));
+        
+        //      - eval():讲 JavaScript 字符串，并把它作为脚本代码来执行。
+        var b = "alert('你好啊')";
+        eval(b); // 弹窗了
+
+        
+      
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

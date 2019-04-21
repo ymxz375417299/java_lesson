@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Array对象</title>
+    <script charset="utf-8">
+      /*
+        Array： 数组对象
+        1. 创建
+          1. var arr = new Array(元素列表);
+          2. var arr = new Array(默认长度);
+          3. var arr = [元素列表];
+
+        2. 方法
+          1. join(参数); 将数组的元素按照指定的分隔符（参数）拼接成字符串， (和python一样)
+          2. push(); 尾部添加元素
+        3. 属性
+          1. length
+        4. 特点：
+         1, js中，数组的元素的类型可以变的。
+         2.  js中，数组的长度可变的
+        **/
+
+        // 1 创建方法1
+        var arr1 = new Array(1, 2, 3);
+        var arr2 = new Array(5);
+        var arr3 = [1, 2, 3, 4, 5];
+        var arr4 = new Array(); // 创建空数组
+
+        // 
+        document.write(arr1 + "<br>");
+        document.write(arr2 + "<br>");
+        document.write(arr3 + "<br>");
+        document.write(arr4 + "<br>");
+
+         // 1, js中，数组的元素的类型可以变的。
+         var arr5 = [1, "abc", true];
+         document.write(arr5 + "<br>")
+         document.write(arr5[0] + "<br>");
+         document.write(arr5[2] + "<br>");
+         document.write(arr5[3] + "<br>");
+         document.write(arr5[10] + "<br>");
+
+         // 2.  js中，数组的长度可变的
+         // 和java的集合很类似，但是js当访问超过原来的数组的长度，不会报错（Java会报错, 数组越界异常）
+         arr5[10] = "hehe";
+         document.write(arr5[10] + "<br>");
+
+          // josin 拼接方法
+         document.write(arr5.join("=") + "<br>");
+
+         // 方法push();
+         arr5.push(11);
+         document.write(arr5 + "<br>");
+
+
+
+         
+      
+    </script>
+  </head>
+  <body>
+    
+  </body>
+</html>

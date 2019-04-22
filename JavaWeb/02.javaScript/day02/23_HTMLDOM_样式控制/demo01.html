@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>HTMLDOM_样式控制</title>
+    <style type="text/css" media="all">
+      .d1{ 
+        width : 200px;
+        height : 200px;
+        border: 1px solid red;
+
+      }
+      .d2{
+        width: 400px;
+        height: 400px;
+        border: 1px solid green;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="div1">
+    div1
+    </div>
+
+    <div id="div2" class="d1">
+    div2
+    </div>
+
+    <script charset="utf-8">
+      /** 
+        样式控制的2个方法
+        1. 使用元素的style属性来设置
+        2. 提前定义好类选择器的样式，通过元素的className属性来设置其class属性值
+        */
+      //1. 1. 使用元素的style属性来设置
+      var div1 = document.getElementById("div1");
+      div1.onclick = function(){
+        // 修改样式
+        div1.style.border = "1px solid red";
+        div.style.width = "200px";
+        // font-size --> fontSize
+        div1.style.fontSize = "22px";
+
+      }
+    
+    //2. 提前定义好类选择器的样式，通过元素的className属性来设置其class属性值。
+      var div2 = document.getElementById("div2");
+      div2.onclick = function(){
+        // 修改样式
+        div2.className = "d2"
+
+      }
+    </script>
+  </body>
+</html>

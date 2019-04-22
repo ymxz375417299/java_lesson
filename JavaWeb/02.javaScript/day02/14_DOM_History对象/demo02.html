@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>练习：轮播图</title>
+    <script charset="utf-8">
+        /*
+          分析：
+            1. 在页面上使用img标签展示图片
+            2. 定义一个方法，修改托盘对象的src属性
+            3. 定义一个定时器，每隔3秒调用方法一次
+        */
+      
+        // 修改图片src属性
+        var num = 1;
+        function fun(){
+          num ++;
+          // 判断number是否大于3
+          if (num > 3){
+            num = 1;
+          }
+          // 获取img对象
+          var img = document.getElementById("img");
+          img.src = "../img/banner_" + num + ".jpg";
+          
+        }
+
+        // 2. 定义定时器
+        setInterval(fun, 3000);
+
+
+    </script>
+  </head>
+  <body>
+    <img id="img" src="../img/banner_1.jpg" alt="" width="100%">
+    <input type="button" name="" id="back" value="后退 ">
+    <script charset="utf-8">
+      // 1. 获取按钮
+      var btn = document.getElementById("back");
+
+      // 2. 绑定单击事件
+      btn.onclick = function(){
+        // 3. 后退一个历史记录
+        //history.back();
+        history.go(-1);
+      }
+      
+    </script>
+  </body>
+</html>

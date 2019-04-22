@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Window_打开关闭方法</title>
+    
+  </head>
+  <body>
+    <input type="button" name="" id="openBtn" value="打开窗口">
+    <input type="button" name="" id="closeBtn" value="关闭窗口">
+    
+  </body>
+  <script charset="utf-8">
+    /* 与打开关闭有关的方法
+        close() 关闭浏览器窗口
+          - 谁调用，就关谁
+        open() 打开一个新的浏览器窗口
+          - 返回值为新的window窗口对象
+    */
+    
+    var openBtn = document.getElementById("openBtn");
+    var newWindow;
+    openBtn.onclick = function(){
+      // 打开窗口
+      newWindow = open("https://www.baidu.com");
+    };
+
+    // 关闭新窗口
+    var closeBtn = document.getElementById("closeBtn");
+    closeBtn.onclick = function(){
+      // 关闭窗口
+      newWindow.close(); // 谁调用我，我关谁
+    }
+
+
+  </script>
+</html>

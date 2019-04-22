@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DOM简单学习</title>
+  </head>
+  <body>
+    <img src="img/off.gif" alt=" " id="light">
+    <h1 id="title">悔创阿里杰克马</h1>
+    
+  </body>
+  <script charset="utf-8">
+    // 获取img标签
+    var light = document.getElementById("light"); // 是可以获取到元素，但是返回null,因为代码先执行js语句，这是img标签还没加载
+    // alert("我要换图片了");
+    light.src = "img/on.gif";
+
+    // 获取H1标签
+    var title  = document.getElementById("title");
+    alert("我要换标题了");
+    // 修改标签体的内容
+    title.innerHTML = "不识妻美刘强东";
+    
+  </script>
+</html>

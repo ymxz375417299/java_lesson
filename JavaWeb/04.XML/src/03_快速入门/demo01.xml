@@ -1,0 +1,13 @@
+<?xml version='1.0' ?>
+
+<users>
+  <user id='id1'>
+    <id>1</id>
+    <name>lucy</name>
+  </user>
+    <br>
+  <user id="id2">
+    <id>2</id>
+    <name>luck</name>
+  </user>
+</users>

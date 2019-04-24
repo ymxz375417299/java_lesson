@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="UTF-8" ?>
+
+<users>
+  <user id='id1'>
+    <id>1</id>
+    <name>张三将</name>
+    <sex>male</sex>
+  </user>
+  <user id="id2">
+    <id>2</id>
+    <name>曹操</name>
+    <sex> female</sex>
+  </user>
+</users>

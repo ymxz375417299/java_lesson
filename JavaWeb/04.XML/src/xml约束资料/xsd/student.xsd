@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns="http://www.itcast.cn/xml"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.itcast.cn/xml" elementFormDefault="qualified">
+    <!-- 声明元素 xsd:element ,并自定义类型type=studentsType(需要下面声明)-->
+    <xsd:element name="students" type="studentsType"/>
+    <!-- 定义复杂类型，名为name="studentsType" -->
+    <xsd:complexType name="studentsType">
+        <!-- 声明需要按顺序出现元素 -->
+        <xsd:sequence>
+            <!-- 声明元素(xsd:element), 自定义类型为studentType类型 最小出现0次，最大出现为无上限 -->
+            <xsd:element name="student" type="studentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- 定义复杂类型，名为name="studentType" -->
+    <xsd:complexType name="studentType">
+        <!-- 声明需要按顺序出现元素 -->
+        <xsd:sequence>
+            <!-- 声明元素，name, 自定义类型为xsd:string -->
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="age" type="ageType" />
+            <xsd:element name="sex" type="sexType" />
+        </xsd:sequence>
+        <xsd:attribute name="number" type="numberType" use="required"/>
+    </xsd:complexType>
+
+
+    <!-- 定义一个简单的类型, 名为name="sexType" -->
+    <xsd:simpleType name="sexType">
+        <!-- 声明基本base数据格式为字符串 -->
+        <xsd:restriction base="xsd:string">
+            <!-- 声明一个枚举，只能在male和femle中选择 -->
+            <xsd:enumeration value="male"/>
+            <xsd:enumeration value="female"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="ageType">
+        <!-- 声明基本base数据格式为整数 -->
+        <xsd:restriction base="xsd:integer">
+            <!-- 声明下限0 -->
+            <xsd:minInclusive value="0"/>
+            <!-- 声明上线256 -->
+            <xsd:maxInclusive value="256"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="numberType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="heima_\d{4}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema> 

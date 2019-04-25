@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="UTF-8" ?>
+
+<students>
+  <student id='id1'>
+    <id>1</id>
+    <name id="itcast">张三<span>将</span></name>
+    <sex>male</sex>
+  </student>
+  <student id="id2" number="heima_0001">
+    <id>2</id>
+    <name >曹操</name>
+    <sex number="10086"> female</sex>
+  </student>
+</students>
